@@ -8,6 +8,8 @@
         :root {
             --primary-blue: #0056b3;
             --accent-red: #d9534f;
+            --whatsapp-green: #25D366;
+            --facebook-blue: #1877F2;
             --light-bg: #f8f9fa;
             --dark-text: #212529;
         }
@@ -110,23 +112,33 @@
             margin-top: 30px;
         }
 
-        .contact-btn {
-            display: inline-block;
-            background-color: var(--accent-red);
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 320px;
+            margin: 15px auto 0;
+        }
+
+        .btn {
+            display: block;
             color: white;
-            padding: 14px 28px;
+            padding: 12px 20px;
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
-            font-size: 1.1em;
-            margin-top: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
-            transition: background 0.2s;
+            font-size: 1em;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: opacity 0.2s;
         }
 
-        .contact-btn:hover {
-            background-color: #c9302c;
+        .btn:hover {
+            opacity: 0.9;
         }
+
+        .call-btn { background-color: var(--accent-red); }
+        .wa-btn { background-color: var(--whatsapp-green); }
+        .fb-btn { background-color: var(--facebook-blue); }
 
         footer {
             text-align: center;
@@ -144,8 +156,8 @@
         <p>Your Trusted IT Partner in Tamale</p>
     </header>
 
-    <!-- Tech Banner Image -->
-    <img src="http://googleusercontent.com/image_collection/image_retrieval/11022608998873668660" alt="Med Computers Tech Hub" class="hero-image">
+    <!-- Top Laptop Banner Image -->
+    <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=1200&auto=format&fit=crop&q=80" alt="Premium Laptops at Med Computers" class="hero-image">
 
     <div class="container">
         <h2>About Med Computers & Tech Hub</h2>
@@ -155,21 +167,31 @@
             <div class="card">
                 <h3>Our Products & Services</h3>
                 <ul>
-                    <li><strong>Hardware Sales:</strong> Premium laptops and desktops from top brands including <span class="badge">Dell</span> <span class="badge">HP</span> <span class="badge">Lenovo</span> <span class="badge">Apple</span>.</li>
+                    <li><strong>Hardware Sales:</strong> Premium laptops and desktops (Dell, HP, Lenovo, Apple).</li>
                     <li><strong>Accessories:</strong> High-quality monitors, power adapters, and components.</li>
-                    <li><strong>Repairs & Maintenance:</strong> Advanced hardware troubleshooting and system optimization.</li>
+                    <li><strong>Repairs & Maintenance:</strong> Hardware troubleshooting and optimization.</li>
                     <li><strong>Networking Solutions:</strong> Full network design, cabling, and deployment.</li>
-                    <li><strong>IT Support:</strong> Managed tech solutions for retail and office infrastructure.</li>
                 </ul>
             </div>
 
             <div class="card">
                 <h3>Business Hours</h3>
-                <p>Visit our branches during our standard operational times:</p>
+                <p>We are open every day to serve your technology needs:</p>
                 <ul>
-                    <li><strong>Monday to Saturday:</strong> Open for Sales & Services.</li>
-                    <li><strong>Sunday:</strong> Closed</li>
+                    <li><strong>Monday to Sunday:</strong> 9:00 AM – 7:00 PM</li>
                 </ul>
+            </div>
+        </div>
+
+        <h2>Featured Products</h2>
+        <div class="grid">
+            <div style="background: white; border: 1px solid #ddd; border-radius: 6px; overflow: hidden; text-align: center;">
+                <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=400&auto=format&fit=crop&q=80" alt="Dell and HP Laptops" style="width:100%; height:180px; object-fit:cover;">
+                <p style="padding: 10px; margin: 0; font-weight: bold;">Premium Laptops (Dell, HP, Lenovo)</p>
+            </div>
+            <div style="background: white; border: 1px solid #ddd; border-radius: 6px; overflow: hidden; text-align: center;">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400&auto=format&fit=crop&q=80" alt="Apple MacBooks" style="width:100%; height:180px; object-fit:cover;">
+                <p style="padding: 10px; margin: 0; font-weight: bold;">Apple MacBooks & Accessories</p>
             </div>
         </div>
 
@@ -186,9 +208,19 @@
         </div>
 
         <div class="contact-section">
-            <h3>Need Sales or Instant Technical Support?</h3>
-            <p>Click below to speak directly with our team for inquiries, stock details, or pricing.</p>
-            <a href="tel:0549128355" class="contact-btn">📞 Call Support: 0549128355</a>
+            <h3>Connect With Us Directly</h3>
+            <p>Click any button below to call us, chat on WhatsApp, or follow our Facebook Page.</p>
+            
+            <div class="btn-group">
+                <!-- Phone Call Link -->
+                <a href="tel:0549128355" class="btn call-btn">📞 Call: 0549128355</a>
+                
+                <!-- WhatsApp Link (Note: 233 is the Ghana country code) -->
+                <a href="https://wa.me/233549128355?text=Hello%20Med%20Computers,%20I%20am%20interested%20in%20your%20laptops/services!" target="_blank" class="btn wa-btn">💬 Chat on WhatsApp</a>
+                
+                <!-- Facebook Link (Replace "YOUR_FACEBOOK_PAGE_NAME" with your actual profile or page handle if you want) -->
+                <a href="https://www.facebook.com/YOUR_FACEBOOK_PAGE_NAME" target="_blank" class="btn fb-btn">👍 Follow us on Facebook</a>
+            </div>
         </div>
     </div>
 
