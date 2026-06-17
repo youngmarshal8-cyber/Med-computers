@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MED COMPUTERS AND TECH HUB</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f7fb;
+color:#222;
+}
+
+nav{
+background:#021b3a;
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav img{
+height:60px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:500;
+}
+
+.hero{
+background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url('laptop1.jpg');
+background-size:cover;
+background-position:center;
+height:90vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero-content h1{
+font-size:3rem;
+margin-bottom:15px;
+}
+
+.hero-content p{
+font-size:1.2rem;
+margin-bottom:25px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 30px;
+background:#00a2ff;
+color:white;
+text-decoration:none;
+border-radius:50px;
+margin:5px;
+font-weight:bold;
+}
+
+.section{
+padding:80px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:2.2rem;
+color:#021b3a;
+margin-bottom:50px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+border-radius:15px;
+padding:25px;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+color:#0066cc;
+margin-bottom:10px;
+}
+
+.product{
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+.product img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.product-info{
+padding:20px;
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:15px;
+}
+
+.contact{
+text-align:center;
+background:#021b3a;
+color:white;
+}
+
+.contact a{
+color:#00bfff;
+text-decoration:none;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+footer{
+background:#011229;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:2rem;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+nav ul{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<img src="logo.jpg" alt="MED Logo">
+
+<ul>
+<li><a href="#services">Services</a></li>
+<li><a href="#products">Products</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>MED COMPUTERS AND TECH HUB</h1>
+
+<p>
+Sales • Repairs • Networking • IT Support
+</p>
+
+<a href="https://wa.me/233549128355" class="btn">
+WhatsApp Us
+</a>
+
+<a href="https://maps.app.goo.gl/5nL2pZRS6s3pDyaVA?g_st=iw" class="btn">
+Find Our Shop
+</a>
+
+</div>
+
+</section>
+
+<section class="section" id="services">
+
+<h2 class="section-title">Our Services</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>💻 Laptop Sales</h3>
+<p>Quality HP, Dell, Lenovo and other laptops.</p>
+</div>
+
+<div class="card">
+<h3>🛠 Laptop Repairs</h3>
+<p>Fast diagnosis and professional repairs.</p>
+</div>
+
+<div class="card">
+<h3>🌐 Networking</h3>
+<p>Office and home network installation.</p>
+</div>
+
+<div class="card">
+<h3>🔒 IT Support</h3>
+<p>Reliable support for businesses and individuals.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="products">
+
+<h2 class="section-title">Featured Products</h2>
+
+<div class="cards">
+
+<div class="product">
+
+<img src="laptop1.jpg">
+
+<div class="product-info">
+
+<h3>HP ProBook Series</h3>
+
+<p>
+Powerful, reliable and affordable laptops for students,
+professionals and businesses.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section about" id="about">
+
+<div>
+
+<h2>Why Choose MED COMPUTERS?</h2>
+
+<br>
+
+<p>
+We provide affordable laptops, desktop computers,
+accessories, networking solutions and expert repairs.
+Our mission is to provide reliable technology solutions
+with excellent customer service.
+</p>
+
+</div>
+
+<div>
+
+<img src="laptop1.jpg">
+
+</div>
+
+</section>
+
+<section class="section contact" id="contact">
+
+<h2 class="section-title" style="color:white;">
+Contact Us
+</h2>
+
+<p>📞 WhatsApp: 0549128355</p>
+
+<br>
+
+<p>
+📘 Facebook:
+<a href="https://www.facebook.com/medcomputersandtech">
+MED COMPUTERS AND TECH HUB
+</a>
+</p>
+
+<br>
+
+<p>
+📍 Google Maps:
+<a href="https://maps.app.goo.gl/5nL2pZRS6s3pDyaVA?g_st=iw">
+Visit Our Shop
+</a>
+</p>
+
+</section>
+
+<footer>
+
+© 2026 MED COMPUTERS AND TECH HUB | All Rights Reserved
+
+</footer>
+
+<a class="whatsapp"
+href="https://wa.me/233549128355">
+WhatsApp
+</a>
+
+</body>
+</html>
