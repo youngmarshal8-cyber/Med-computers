@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MED COMPUTERS AND TECH HUB | Sales, Repairs & IT Solutions</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#08162c;
+color:white;
+line-height:1.7;
+}
+
+:root{
+--gold:#d4af37;
+--blue:#08162c;
+--light:#10284f;
+}
+
+header{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(8,22,44,.95);
+backdrop-filter:blur(10px);
+z-index:1000;
+box-shadow:0 2px 15px rgba(0,0,0,.3);
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 8%;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:700;
+color:var(--gold);
+}
+
+.logo img{
+height:50px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:20px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:500;
+}
+
+nav ul li a:hover{
+color:var(--gold);
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:100px 20px;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url('images/laptop1.jpg');
+background-size:cover;
+background-position:center;
+}
+
+.hero-content h1{
+font-size:3rem;
+color:var(--gold);
+}
+
+.hero-content p{
+max-width:700px;
+margin:20px auto;
+}
+
+.btn{
+display:inline-block;
+padding:14px 28px;
+background:var(--gold);
+color:black;
+text-decoration:none;
+font-weight:600;
+border-radius:30px;
+margin-top:15px;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+section{
+padding:80px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:2.2rem;
+margin-bottom:50px;
+color:var(--gold);
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:var(--light);
+padding:25px;
+border-radius:15px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:12px;
+}
+
+.pricing{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.price-card{
+background:var(--light);
+padding:30px;
+border-radius:15px;
+text-align:center;
+}
+
+.price{
+font-size:2rem;
+color:var(--gold);
+margin:15px 0;
+}
+
+.testimonials{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.testimonial{
+background:var(--light);
+padding:25px;
+border-radius:15px;
+}
+
+.contact{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+}
+
+.contact form{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.contact input,
+.contact textarea{
+padding:15px;
+border:none;
+border-radius:10px;
+}
+
+.contact button{
+padding:15px;
+border:none;
+background:var(--gold);
+font-weight:bold;
+border-radius:10px;
+cursor:pointer;
+}
+
+footer{
+background:#050d1b;
+text-align:center;
+padding:30px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+width:60px;
+height:60px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:30px;
+text-decoration:none;
+color:white;
+z-index:1000;
+}
+
+.socials{
+display:flex;
+justify-content:center;
+gap:15px;
+margin-top:15px;
+}
+
+.socials a{
+color:white;
+text-decoration:none;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:2rem;
+}
+
+.contact{
+grid-template-columns:1fr;
+}
+
+nav ul{
+display:none;
+}
+
+}
+
+.fade{
+opacity:0;
+transform:translateY(30px);
+transition:1s;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
+}
+
+</style>
+</head>
+<body>
+
+<header>
+<nav>
+
+<div class="logo">
+<img src="images/logo.png" alt="Logo">
+<span>MED COMPUTERS AND TECH HUB</span>
+</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#products">Products</a></li>
+<li><a href="#pricing">Pricing</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+</header>
+
+<section class="hero" id="home">
+<div class="hero-content">
+<h1>MED COMPUTERS AND TECH HUB</h1>
+<p>Your Trusted Partner for Laptop Sales, Repairs, Networking, Accessories and IT Solutions.</p>
+
+<a href="https://wa.me/233549128355" class="btn">
+Chat on WhatsApp
+</a>
+
+</div>
+</section>
+
+<section id="services" class="fade">
+<h2 class="section-title">Our Services</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>💻 Laptop Sales</h3>
+<p>Quality HP, Dell, Lenovo and Apple laptops.</p>
+</div>
+
+<div class="card">
+<h3>🛠 Computer Repairs</h3>
+<p>Hardware and software troubleshooting.</p>
+</div>
+
+<div class="card">
+<h3>🌐 Networking</h3>
+<p>Router setup, office networking and internet solutions.</p>
+</div>
+
+<div class="card">
+<h3>🖨 Accessories</h3>
+<p>Printers, routers, SSDs, RAM and peripherals.</p>
+</div>
+
+</div>
+</section>
+
+<section id="products" class="fade">
+
+<h2 class="section-title">Featured Products</h2>
+
+<div class="gallery">
+
+<img src="images/laptop1.jpg">
+<img src="images/laptop2.jpg">
+<img src="images/desktop1.jpg">
+<img src="images/printer1.jpg">
+<img src="images/networking1.jpg">
+<img src="images/laptop1.jpg">
+
+</div>
+
+</section>
+
+<section id="pricing" class="fade">
+
+<h2 class="section-title">Pricing Plans</h2>
+
+<div class="pricing">
+
+<div class="price-card">
+<h3>Basic Repair</h3>
+<div class="price">Affordable</div>
+<p>Software Installation</p>
+<p>Virus Removal</p>
+<p>System Optimization</p>
+</div>
+
+<div class="price-card">
+<h3>Business Support</h3>
+<div class="price">Premium</div>
+<p>Network Setup</p>
+<p>IT Consultation</p>
+<p>Office Support</p>
+</div>
+
+<div class="price-card">
+<h3>Enterprise</h3>
+<div class="price">Custom</div>
+<p>Full IT Management</p>
+<p>Networking</p>
+<p>Maintenance</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="fade">
+
+<h2 class="section-title">Customer Testimonials</h2>
+
+<div class="testimonials">
+
+<div class="testimonial">
+⭐⭐⭐⭐⭐
+<p>Excellent laptop quality and customer support.</p>
+<b>- Michael</b>
+</div>
+
+<div class="testimonial">
+⭐⭐⭐⭐⭐
+<p>Professional repair service and fast delivery.</p>
+<b>- Daniel</b>
+</div>
+
+<div class="testimonial">
+⭐⭐⭐⭐⭐
+<p>Best computer store experience I've had.</p>
+<b>- Sarah</b>
+</div>
+
+</div>
+
+</section>
+
+<section class="fade">
+
+<h2 class="section-title">Find Us</h2>
+
+<iframe
+src="https://maps.google.com/maps?q=Accra&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%"
+height="450"
+style="border:0;border-radius:15px;">
+</iframe>
+
+</section>
+
+<section id="contact" class="fade">
+
+<h2 class="section-title">Contact Us</h2>
+
+<div class="contact">
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<textarea rows="5" placeholder="Message"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+<div>
+
+<h3>MED COMPUTERS AND TECH HUB</h3>
+
+<p>📞 0549128355</p>
+
+<p>📧 your@email.com</p>
+
+<p>📍 Accra, Ghana</p>
+
+<br>
+
+<a class="btn" target="_blank"
+href="https://www.facebook.com/share/1Ay5Etguj4/">
+Visit Facebook Page
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>MED COMPUTERS AND TECH HUB</h3>
+
+<p>Sales • Repairs • Networking • IT Support</p>
+
+<div class="socials">
+<a href="https://www.facebook.com/share/1Ay5Etguj4/" target="_blank">Facebook</a>
+<a href="https://wa.me/233549128355" target="_blank">WhatsApp</a>
+</div>
+
+<p style="margin-top:15px;">
+© 2026 MED COMPUTERS AND TECH HUB. All Rights Reserved.
+</p>
+
+</footer>
+
+<a href="https://wa.me/233549128355"
+target="_blank"
+class="whatsapp">
+💬
+</a>
+
+<script>
+
+const observer = new IntersectionObserver(entries => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+
+});
+
+});
+
+document.querySelectorAll('.fade').forEach(el=>{
+observer.observe(el);
+});
+
+</script>
+
+</body>
+</html>
